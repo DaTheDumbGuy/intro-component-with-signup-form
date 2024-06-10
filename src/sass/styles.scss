@@ -1,0 +1,8 @@
+@use './base/index' as b;
+*, *::before, *::after{
+    margin:0;
+    box-sizing:border-box;
+}
+body{
+    min-height:100vh;
+}
