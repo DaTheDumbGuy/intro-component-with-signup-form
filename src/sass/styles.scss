@@ -5,4 +5,24 @@
 }
 body{
     min-height:100vh;
+    background-image:url(../../images/bg-intro-mobile.png);
+    background-color:b.$bg_primary_red;
+    color:white;
+    
+}
+.sign_up_component{
+    max-width:375px;
+    margin:auto;
+    padding:0 1.5em;
+
+    &_body{
+        background:transparent;
+    }
+}
+
+@media (min-width:768px) {
+    .sign_up_component{
+        display:flex;
+        max-width:1000px;
+    }
 }

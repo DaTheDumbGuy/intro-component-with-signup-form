@@ -1,5 +1,14 @@
 .header{
-    width:90%;
     text-align: center;
-    margin:80px auto 0 auto;
+    margin:90px auto 60px auto;
+
+    h1{
+        font-size:1.7em;
+        line-height:1.4em;
+        margin-bottom:1em;
+        text-wrap: balance;
+    }
+    p{
+        line-height:1.5em;
+    }
 }

@@ -1,14 +1,15 @@
 import Header from "./Header/Header";
 import FreeTrial from "./FreeTrial/FreeTrial";
 import Form from "./Form/Form";
-import Button from "./Button/Button";
+
 export default function Signup() {
   return (
-    <article>
+    <article className="sign_up_component">
       <Header />
-      <FreeTrial />
-      <Form />
-      <Button />
+      <div className="sign_up_component_body">
+        <FreeTrial />
+        <Form />
+      </div>
     </article>
   );
 }
