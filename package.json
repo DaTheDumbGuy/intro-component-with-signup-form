@@ -3,6 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage":"https://DaTheDumbGuy.github.io/intro-component-with-signup-form/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

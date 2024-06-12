@@ -14,36 +14,58 @@ export default function Form() {
   const [errors, setErrors] = useState({});
 
   const handleChange = (event) => {
-    setFormData({ ...formData, [event.target.name]: event.target.value });
-    console.table(formData);
+    const { name, value } = event.target;
+
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+    if (errors[name]) {
+      setErrors({
+        ...errors,
+        [name]: "",
+      });
+    }
   };
 
   const validateForm = (data) => {
+    const errors = {};
+
     if (!data.firstName) {
-      setErrors({ ...errors, firstName: "First Name cannot be Empty " });
+      errors.firstName = "First Name cannot be empty";
     }
 
     if (!data.lastName) {
-      setErrors({ ...errors, lastName: "Last Name cannot be Empty " });
+      errors.lastName = "Last Name cannot be empty";
     }
+
     if (!data.email) {
-      setErrors({ ...errors, email: "Email cannot be Empty " });
+      errors.email = "Email cannot be empty";
+    } else if (!/\S+@\S+\.\S+/.test(data.email)) {
+      errors.email = "Email is invalid";
     }
+
     if (!data.password) {
-      setErrors({ ...errors, password: "Password cannot be Empty " });
+      errors.password = "Password cannot be empty";
+    } else if (data.password.length < 6) {
+      errors.password = "Password must be at least 6 characters";
     }
+
+    return errors;
   };
 
   const handleSubmit = (event) => {
     event.preventDefault(); // Prevent default form submission
 
     const validationResult = validateForm(formData);
-    // if (validationResult.isValid) {
-    //   alert("Success");
-    // }
-    // else {
-    //   // Display error messages (e.g., update state to show errors)
-    // }
+
+    if (Object.keys(validationResult).length >= 1) {
+      setErrors(validationResult);
+    } else {
+      setErrors({});
+      // Submit the form (e.g., send data to the server)
+      console.log("Form data is valid:", formData);
+    }
   };
 
   return (
