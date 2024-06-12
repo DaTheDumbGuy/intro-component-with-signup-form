@@ -1,0 +1,18 @@
+@use '../../../../sass/base/index' as b;
+.btn{
+    padding:1rem;
+    width:100%;
+    text-transform: uppercase;
+    font-weight:600;
+    color:white;
+    background: b.$c_primary_green;
+    border:none;
+    letter-spacing: 1px;
+    border-radius:5px;
+    box-shadow:0 3px 0 b.$c_primary_green_shadow;
+    margin-bottom:1em;
+
+    &:active{
+        background:b.$c_primary_green_active;
+    }
+}
