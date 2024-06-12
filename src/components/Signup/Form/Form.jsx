@@ -55,7 +55,7 @@ export default function Form() {
   };
 
   const handleSubmit = (event) => {
-    event.preventDefault(); // Prevent default form submission
+    event.preventDefault();
 
     const validationResult = validateForm(formData);
 
@@ -63,7 +63,7 @@ export default function Form() {
       setErrors(validationResult);
     } else {
       setErrors({});
-      // Submit the form (e.g., send data to the server)
+      alert(`Success -- Look on console for the data`);
       console.log("Form data is valid:", formData);
     }
   };

@@ -2,7 +2,6 @@ import inputStyles from "./input.module.scss";
 import errImg from "../../../../../images/icon-error.svg";
 
 export default function Input(props) {
-  console.log(props.error);
   return (
     <div className={inputStyles.input_group}>
       <div
