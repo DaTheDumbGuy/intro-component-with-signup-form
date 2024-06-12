@@ -1,3 +1,5 @@
+import formBtnStyles from "./formbtn.module.scss";
+
 export default function FormBtn() {
-  return <button>Claim your free trial</button>;
+  return <button className={formBtnStyles.btn}>Claim your free trial</button>;
 }

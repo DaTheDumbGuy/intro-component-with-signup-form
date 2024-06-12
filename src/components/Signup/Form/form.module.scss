@@ -1,4 +1,25 @@
 @use '../../../sass/base/index' as b;
 .form{
+    padding:2em 1.5em;
+    color:b.$c_neutral_darkblue;
     background:white;
+    border-radius:10px;
+
+    .terms_and_services{
+        text-align: center;
+        font-size:0.7em;
+        padding:0 1em;
+        font-weight:600;
+
+        a{
+            color:b.$bg_primary_red;
+            text-decoration: none;
+        }
+    }
+}
+
+@media (min-width:768px){
+    .form{
+        padding: 2.5em 1.8em;
+    }
 }

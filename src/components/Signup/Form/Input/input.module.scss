@@ -1,3 +1,47 @@
-.error{
-    color:red;
+@use '../../../../sass/base/index' as b;
+.input_group{
+    margin-bottom:1em;
+    text-align: end;
+
+    .input_container{
+        display:flex;
+        align-items: center;
+        justify-content: space-between;
+        padding:0 15px;
+        height:50px;
+        border:1px solid b.$c_neutral_darkblue;
+        border-radius:5px;
+
+        &.errorInput{
+            border:2px solid b.$bg_primary_red;
+    
+        }
+        &:focus-within{
+            border:2px solid b.$c_neutral_greyishblue;
+        }
+    
+        input{
+            border:none;
+            font-weight:600;
+
+            &:focus, &:hover{
+                border:none;
+                outline: none;
+            }
+        }
+        
+        .errorImg{
+               
+            img{
+                display: block;
+            }
+        }
+    }
+
+    .errorMsg{
+        color:b.$bg_primary_red;
+        font-weight:500;
+        font-size:0.7em;
+        font-style: italic;
+    }
 }

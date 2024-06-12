@@ -81,7 +81,7 @@ export default function Form() {
         error={errors.password}
       />
       <FormBtn />
-      <p>
+      <p className={formStyles.terms_and_services}>
         By clicking the button, you are agreeing to our{" "}
         <a href="#">Terms and Services</a>
       </p>
